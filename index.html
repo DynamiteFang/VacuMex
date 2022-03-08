@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VacuMex</title>
+  <meta name="description"
+    content="P&aacutegina oficial de VacuMex, tu aliado en informaci&oacuten sobre la vacunaci&oacuten en M&eacutexico.">
+  <meta name="author" content="DynamiteFang">
+  <script src="https://kit.fontawesome.com/57dc8547e2.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+  body {
+    background-color: white;
+    font-family: tahoma;
+    padding: 0;
+    margin: 0;
+    color: #8a8fac
+  }
+
+  #header {
+    background-color: rgb(255, 255, 255);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=95);
+    -moz-opacity: 0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+  }
+
+  #header #header-content {
+    margin: 10px;
+  }
+
+  .topnav {
+    overflow: auto;
+    position: top;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .topnav a {
+    float: right;
+    color: #b4b4b4;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.8em;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-family: Helvetica
+  }
+
+
+  .topnav a:hover {
+    color: #7f7d8d;
+    font-family: Helvetica
+  }
+
+  .topnav a.box {
+    color: #ffffff;
+    background-color: #3346f7;
+    font-family: Helvetica;
+    border: 5px solid #3346f7;
+    border-width: 15px;
+    line-height: 1em;
+    box-shadow: 0px 4px 5px 0px #c8ceff;
+  }
+
+  h3.title {
+    box-sizing: border-box;
+    color: #5c44e6;
+    display: block;
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.1em;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+    float: left
+  }
+
+  h1.big {
+    color: #474885;
+    font-family: Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1em;
+  }
+
+  h2.big {
+    color: #9a9b9e;
+    font-family: Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 650;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  div.container-footer.w-container {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+    padding-top: 70px;
+    background: #eff3ff;
+    opacity: 1;
+  }
+
+  div.container-footer.w-container:after {
+    clear: both;
+    content: " ";
+    display: table;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-row-start: 1;
+  }
+
+  div.container-footer.w-container:before {
+    content: " ";
+    display: table;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-row-start: 1;
+  }
+
+  div.w-row {
+    box-sizing: border-box;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  div.w-row:after {
+    clear: both;
+    content: " ";
+    display: table;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-row-start: 1;
+  }
+
+  div.w-row:before {
+    content: " ";
+    display: table;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-row-start: 1;
+  }
+
+  div.footer-column.w-clearfix.w-col.w-col-4 {
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    width: 33.3333%;
+  }
+
+  div.footer-column.w-clearfix.w-col.w-col-4:after {
+    clear: both;
+    content: " ";
+    display: table;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-row-start: 1;
+  }
+
+  div.footer-column.w-clearfix.w-col.w-col-4:before {
+    content: " ";
+    display: table;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-row-start: 1;
+  }
+
+
+  h3.footer-failory-name {
+    box-sizing: border-box;
+    color: #5c44e6;
+    display: block;
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.1em;
+    margin-bottom: 16px;
+    margin-top: 15px;
+    margin-right: 80px;
+    margin-left: 40px;
+  }
+
+  p.footer-description-failory {
+    box-sizing: border-box;
+    color: rgba(66, 63, 194, 0.8);
+    display: block;
+    font-family: Lato, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin-bottom: 16px;
+    margin-top: 15px;
+    margin-right: 90px;
+    margin-left: 40px;
+    text-align: left;
+  }
+
+  br {
+    box-sizing: border-box;
+  }
+
+  div.footer-column.w-col.w-col-8 {
+    box-sizing: border-box;
+    float: right;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: static;
+    width: 66.6667%;
+  }
+
+  div.w-col.w-col-8 {
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 5px;
+    position: relative;
+    width: 66.6667%;
+    display: inline-block;
+  }
+
+  div.w-col.w-col-7.w-col-small-6.w-col-tiny-7 {
+    box-sizing: border-box;
+    float: right;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  div.w-col.w-col-5.w-col-small-6.w-col-tiny-5 {
+    box-sizing: border-box;
+    float: right;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  div.column-center-mobile.w-col.w-col-4 {
+    box-sizing: border-box;
+    float: right;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  h3.footer-titles {
+    box-sizing: border-box;
+    color: #342d99;
+    display: inline-block;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.1em;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5 px
+  }
+
+  p.footer-links {
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.8em;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+
+  p.footer-links2 {
+    color: rgba(255, 255, 255, 0.8);
+    display: inline;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.8em;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-right: 30px;
+    padding-left: 15px;
+    padding-right: 30px;
+  }
+
+  h3.cope {
+    color: rgba(2, 38, 136, 0.8);
+    display: inline;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3em;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-right: 20px;
+    padding-left: 40px;
+    padding-right: 15px;
+  }
+
+
+  a {
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.2em;
+    text-decoration: none;
+  }
+
+  a:active {
+    outline: 0;
+  }
+
+  a:hover {
+    outline: 0;
+  }
+
+  span.footer-link {
+    box-sizing: border-box;
+    color: rgba(2, 38, 136, 0.8);
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+
+  h2.texts {
+    box-sizing: border-box;
+    color: rgba(2, 38, 136, 0.623);
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+  }
+
+  h2.sub {
+    box-sizing: border-box;
+    color: rgba(2, 38, 138, 0.808);
+    font-weight: 750;
+    margin-bottom: 30px;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+  }
+
+  span.footer-link:hover {
+    color: #8a8fac;
+    font-weight: 400;
+  }
+
+  span {
+    box-sizing: border-box;
+  }
+
+  strong {
+    box-sizing: border-box;
+    font-weight: 700;
+  }
+
+
+
+  img {
+    border-width: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 100%;
+    float: right;
+  }
+
+  p.footer-description {
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    font-family: Lato, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.5em;
+    margin-bottom: 16px;
+    margin-top: 15px;
+  }
+
+
+  .column2 {
+    float: right;
+    width: 50%;
+    position: relative;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    position: relative;
+  }
+
+  .columntext {
+    padding-left: 50px;
+    padding-right: 50px
+  }
+
+ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .yeiconcolor {
+    color: rgb(255, 217, 0);
+
+  }
+
+  .boxicon {
+    display: inline-block;
+    font-size: 14px;
+    background-color: rgb(210, 233, 255);
+    color: rgb(0, 78, 180);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 9px;
+  }
+
+  .shadicon {
+    filter: drop-shadow(0 0 0.25rem rgba(146, 185, 221, 0.514));
+  }
+
+  .bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    height: auto;
+    width: 800px;
+    align-items: middle;
+    top: 5%;
+    left: 20%;
+    background-color: rgba(245, 248, 255, 0.877);
+    border-radius: 10px;
+    z-index:100
+  }
+
+  .titlefloat {
+    text-align: center;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 530;
+    color: rgb(112, 112, 112);
+    margin-left: 0.4em;
+  }
+
+  .valuesFloat {
+    margin-left: 20%;
+    font-size: 20px;
+    font-weight: 550;
+    color: rgb(21, 49, 92);
+  }
+
+  .btn {
+  display: inline;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  border-radius: 0.25rem;
+}
+
+  .btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  }
+
+  .marcas {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+</style>
+
+<body>
+  <div id="header">
+    <div id="header-content">
+      <h3 class="title">VacuMex</h3>
+      <div class="topnav">
+        <a class="box" href="">Cazamitos</a>
+        <a href="">Regulaciones</a>
+        <a href="">Noticias</a>
+        <a href="">Educaci&oacuten</a>
+        <a href="">Base de Datos</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column" z-index="-1">
+      <img src="https://i.imgur.com/SgOIHHR.png" />
+      <br>
+      <img src="https://i.imgur.com/SgOIHHR.png" />
+      <div class=columntext>
+        <h1 class="big">Combate al Virus con las Vacunas</h1>
+        </p>
+        <p>
+        <h2 class="big">Acabemos de una vez por todas con esta enfermedad vacun&aacutendonos, no dejes que tu familia y
+          t&uacute se infecten.
+          <p>
+        </h2>
+        <h2 class="texts"><b><i class="fa-solid fa-shield-blank yeiconcolor fa-sm"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&aacutes
+            protegidos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+              class="fa-solid fa-star yeiconcolor fa-sm"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vacunas Selectas</b></h2>
+        <h2 class="sub">
+          <span class="boxicon shadicon" style="margin-top:15%; margin-left:8%;">
+            <i class="fa-solid fa-clock fa-lg"></i></span>
+          &nbsp;&nbsp;&nbsp;Programa tus vacunas
+        </h2>
+        <div class="bar" z-index="100">
+          <div>
+            <span class="boxicon" style="margin-top:10%; margin-left:15%;"><i
+                class="fa-solid fa-location-arrow fa-lg "></i></span>
+            <p class="titlefloat">Ubicaci&oacuten</p>
+            <p class="valuesFloat">Chinconcuac</p>
+          </div>
+          <div>
+            <span class="boxicon" style="margin-top:10%; margin-left:15%;"><i
+                class="fa-solid fa-calendar-days fa-lg "></i></span>
+            <p class="titlefloat">Fecha</p>
+            <p class="valuesFloat">Mayo 10 2022</p>
+          </div>
+          <div>
+            <span class="boxicon" style="margin-top:10%; margin-left:15%;"><i
+                class="fa-solid fa-pencil fa-lg "></i></span>
+            <p class="titlefloat">Marca</p>
+            <p class="valuesFloat">Astra-Zeneca</p>
+          </div>
+          <div>
+            <button class="btn btn-primary shadicon" style="padding-left: 25px; padding-right: 25px; margin-top: 20%; margin-left: 25px;">Submit</button>
+          </div>
+        </div>
+    
+      </div>
+      
+      </div>
+    <div class="column2" z-index="-1">
+      <img src="https://i.imgur.com/seyxHwT.jpg" title="Nurse" />
+    </div>
+  </div>
+ <img class="marcas" src="https://i.imgur.com/0W1X8Wy.png"/>
+
+  When haces tus momos en el codigo.<p>
+    When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p>When haces tus momos en el codigo.
+  <p></p>
+
+
+
+  <div class="container-footer w-container">
+    <div class="w-row">
+      <div class="footer-column w-clearfix w-col w-col-4">
+        <h3 class="footer-failory-name">VacuMex</h3>
+        <p class="footer-description-failory">Nuestra misi&oacuten es informar y alentar a la poblaci&oacuten mexicana a
+          vacunarse contra el Covid-19.<br></p>
+      </div>
+      <span style="padding-left:50px"></span>
+      <div class="footer-column w-col w-col-8">
+        <div class="w-row">
+          <div class="w-col w-col-8">
+            <div class="w-row">
+
+              <div class="w-col w-col-5 w-col-small-6 w-col-tiny-5">
+                <h3 class="footer-titles">Compa&ntilde&iacutea</h3>
+                <p class="footer-links"><a href=""><span class="footer-link">Forma de Trabajo<br></span></a>
+                  <a href=""><span class="footer-link">Capital<br></span></a>
+                  <a href=""><span class="footer-link">Seguridad<br></span></a>
+                  <strong><br></strong>
+                </p>
+              </div>
+              <div class="w-col w-col-7 w-col-small-6 w-col-tiny-7">
+                <h3 class="footer-titles">Acerca de</h3>
+                <p class="footer-links"><a href="" target="_blank"><span class="footer-link">Nosotros<br></span></a>
+                  <a href=""><span class="footer-link">Actualizaciones<br></span></a>
+                  <a href=""><span class="footer-link">Noticias & Blog</span></a><span><br></span>
+                  <strong><br></strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="column-center-mobile w-col w-col-4">
+            <h3 class="footer-titles">Soporte</h3>
+            <p class="footer-links"><a href=""><span class="footer-link">FAQ<br></span></a>
+              <a href=""><span class="footer-link">Centro de Soporte<br></span></a>
+              <a href=""><span class="footer-link">Cont&aacutectanos<br></span></a>
+              <strong><br></strong>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="footer-links2">
+      <h3 class="cope" style="float:left">2022 VacuMex - Todos los Derechos Reservados</h3>
+      <a href=""><span class="footer-link" style="float:right">Pol&iacutetica de
+          Privacidad&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+      <a href=""><span class="footer-link" style="float:right">T&eacuterminos &
+          Condiciones&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></a></p><br>
+
+    </footer>
+  </div>
+
+
+
+  <script src="js/scripts.js">
+    window.onscroll = function () { myFunction() };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    $(".current").click(function () {
+      $(this).next("ul").toggle();
+    });
+
+  </script>
+</body>
+
+</html>
