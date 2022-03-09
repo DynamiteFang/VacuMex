@@ -1,2 +1,2 @@
-# vacumex.gituhub.io
+# VacuMex
 Página de práctica de estilos para LaunchX
